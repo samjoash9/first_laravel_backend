@@ -8,17 +8,16 @@ use Illuminate\Http\Request;
 
 class CarouselItemsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // Display a listing of the resource.
     public function index()
     {
         return CarouselItems::all();
     }
 
     /**
-     * Store a newly created resource in storage.
-     */
+    * Store a newly created resource in storage.
+    * CREATE
+    */
     public function store(Request $request)
     {
         //
@@ -26,6 +25,7 @@ class CarouselItemsController extends Controller
 
     /**
      * Display the specified resource.
+     * READING
      */
     public function show(string $id)
     {
@@ -34,6 +34,7 @@ class CarouselItemsController extends Controller
 
     /**
      * Update the specified resource in storage.
+     * UPDATE
      */
     public function update(Request $request, string $id)
     {
@@ -42,6 +43,7 @@ class CarouselItemsController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * DELETE
      */
     public function destroy(string $id)
     {
