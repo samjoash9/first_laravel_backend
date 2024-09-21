@@ -26,10 +26,11 @@ class CarouselItemsController extends Controller
     /**
      * Display the specified resource.
      * READING
-     */
+     * shows 1 row at a time only
+     */ 
     public function show(string $id)
     {
-        //
+        return CarouselItems::findOrFail($id);
     }
 
     /**
