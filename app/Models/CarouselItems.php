@@ -9,7 +9,6 @@ class CarouselItems extends Model
 {
     use HasFactory;
 
-    // way to get data from database
     /**
      * The table associated with the model.
      *
