@@ -25,7 +25,7 @@ class CarouselItemsController extends Controller
         $validated = $request->validated();
 
         $carousel = CarouselItems::create($validated);
-        
+
         return $carousel;
    }
 
@@ -43,9 +43,13 @@ class CarouselItemsController extends Controller
      * Update the specified resource in storage.
      * UPDATE
      */
-    public function update(Request $request, string $id)
+    // use x-www-form-urlencoded in postman for testing
+    public function update(CarouselItemRequest $request, string $id)
     {
-        //
+        $validated = $request->validated();
+        $carouselItem = CarouselItems::findOrFail($id);
+        $carouselItem->update($validated);
+        return $carouselItem;
     }
 
     /**
