@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Optionally seed the User model
         // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // Seed the CarouselModel
+        \App\Models\CarouselItems::factory()->count(10)->create(); // Adjust the count as needed
     }
 }
